@@ -1,0 +1,385 @@
+# Rime schema
+# encoding: utf-8
+
+schema:
+  schema_id: tjuqkox_sampheq
+  name: 中古漢語三拼
+  version: "2022.02"
+  author:
+    - 竹客 <tiukha@foxmail.com>
+  description: |
+    中古漢語拼音Polyhedron-Tiukha方案
+    基於「古韻羅馬字」Polyhedron中古漢語拼音方案
+    http://zh.wikipedia.org/wiki/User:Polyhedron/中古漢語拼音
+  dependencies:
+    - luna_pinyin
+    - stroke
+
+switches:
+  - name: ascii_mode
+    reset: 0
+    states: [ 中文, 西文 ]
+  - name: full_shape
+    states: [ 半角, 全角 ]
+  - name: simplification
+    states: [ 漢字, 汉字 ]
+  - name: ascii_punct
+    states: [ 。，, ．， ]
+  - name: emoji_suggestion
+    states: [ "🈚️️\uFE0E", "🈶️️\uFE0F" ]
+
+engine:
+  processors:
+    - ascii_composer
+    - recognizer
+    - key_binder
+    - speller
+    - punctuator
+    - selector
+    - navigator
+    - express_editor
+  segmentors:
+    - ascii_segmentor
+    - matcher
+    - affix_segmentor@luna_pinyin
+    - affix_segmentor@stroke
+    - abc_segmentor
+    - punct_segmentor
+    - fallback_segmentor
+  translators:
+    - punct_translator
+    - script_translator
+    - script_translator@luna_pinyin
+    - table_translator@stroke
+  filters:
+    - simplifier
+    - simplifier@emoji_suggestion
+    - uniquifier
+    - reverse_lookup_filter@tjuqkox_sampheq_reverse_lookup
+
+speller:
+  alphabet: zyxwvutsrqponmlkjihgfedcba
+  delimiter: " '"
+  algebra:
+# 例外音
+    - "xform/'//"       
+
+#鍵盤可以任意DIY，但注意xform順序
+# 第一字母 - 聲母
+    # P組 O - ph
+    - xform/^m/M/
+    - xform/^b/B/ 
+    - xform/^ph/O/
+    - xform/^p/P/
+    # T組 Y - th
+    - xform/^n/N/
+    - xform/^d/D/
+    - xform/^th/Y/
+    - xform/^t/T/
+    # K組 I - kh
+    - xform/^q/Q/
+    - xform/^g/G/
+    - xform/^kh/I/
+    - xform/^k/K/
+    # C組 U - ch
+    - xform/^r(i|y|j|w)/R$1/
+    - xform/^s/S/
+    - xform/^z/Z/
+    - xform/^ch/U/
+    - xform/^c/C/
+    # X組
+    - xform/^x/X/
+    - xform/^v(i|y)/V$1/
+    # L組 
+    - xform/^l/L/
+    # J組
+    - xform/^j(i|y)/J$1/
+    # H組 E - 0 
+    - xform/^h/H/
+    - xform/^w(i|y)/W$1/
+    - xform/^([aeourviyjw])/E$1/
+
+# 侯韻元音為 o
+    - xform/([A-Z])u$/$1ou/
+    - xform/([A-Z])u(x|h)/$1ou$2/
+
+# 東一元音為 O
+    - xform/([A-Z])u(q|k)/$1Ou$2/
+
+# 脂韻韻尾為 0
+    - xform/([A-Z])([iyjw])h$/$1$2Q/
+    - xform/([A-Z])([iyjw])x$/$1$2A/
+    - xform/([A-Z])([iyjw])$/$1$2Z/
+
+# 第三字母韻尾聲調
+  #陰聲韻
+    #平聲 X C - i u
+    - xform/i$/X/
+    - xform/u$/C/
+    #上聲 S D - ix ux
+    - xform/ix$/S/
+    - xform/ux$/D/
+    #去聲 W E - ih/j uh
+    - xform/ih$/W/
+    - xform/j$/W/
+    - xform/uh$/E/
+  #陽聲韻
+    #平聲 M N B V - m n q uq
+    - xform/uq$/V/
+    - xform/q$/B/
+    - xform/n$/N/
+    - xform/m$/M/
+    #上聲 L K J H - mx nx qx uqx
+    - xform/uqx$/H/
+    - xform/qx$/J/
+    - xform/nx$/K/
+    - xform/mx$/L/
+    #去聲 P O I U - mh nh qh uqh
+    - xform/uqh$/U/
+    - xform/qh$/I/
+    - xform/nh$/O/
+    - xform/mh$/P/
+  #入聲韻 Y T R F - p t k uk
+    - xform/uk$/F/
+    - xform/k$/R/
+    - xform/t$/T/
+    - xform/p$/Y/
+  #無韻尾 Z A Q -0 x h
+    - xform/h$/Q/
+    - xform/x$/A/
+    - xform/([a-z])$/$1Z/
+
+# 第二字母介音元音
+  #合口
+    #a元音 L K J H - ua ya wa va
+    - xform/va/H/
+    - xform/wa/J/
+    - xform/ya/K/
+    - xform/ua/L/
+    #e元音 U I O P - ue ye we ve
+    - xform/ve/U/
+    - xform/we/I/
+    - xform/ye/O/
+    - xform/ue/P/
+    #o元音 M N B - uo yo wo
+    - xform/wo/B/
+    - xform/yo/N/
+    - xform/uo/M/
+    #i元音 Y G - y w
+    - xform/y/Y/
+    - xform/w/G/
+  #開口
+    #a元音 A S D F - a ia ja ra
+    - xform/ra/F/
+    - xform/ja/D/
+    - xform/ia/S/
+    - xform/a/A/
+    #e元音 Q W E R - e ie je re
+    - xform/re/R/
+    - xform/je/E/
+    - xform/ie/W/
+    - xform/e/Q/
+    #o元音 Z X C - o io jo
+    - xform/jo/C/
+    - xform/io/X/
+    - xform/o/Z/
+    #i元音 t v - i j
+    - xform/i/T/
+    - xform/j/V/
+
+#全部轉爲小寫
+    - xlit/ABCDEFGHIJKLMNOPQRSTUVWXYZ/abcdefghijklmnopqrstuvwxyz/
+
+# 通江攝元音
+    #一等 東一 冬 - O U
+    #二等 江 - R
+    #三等A類 東三 鍾 - I Y
+    - xform/t(v|h|u|f)$/i$1/
+    - xform/y(v|h|u|f)$/y$1/
+    #三等B類 東三 鍾 - J W
+    - xform/v(v|h|u|f)$/j$1/
+    - xform/g(v|h|u|f)$/w$1/
+
+#簡拼
+    - abbrev/^([a-z]).+$/$1/
+
+translator:
+  dictionary: tjuqkox_zyenpheq
+  spelling_hints: 8
+  prism: tjuqkox_sampheq
+  preedit_format:    
+# 第三字母韻尾聲調
+  #陰聲韻
+    #平聲 Z X C - 0 i u
+    - xform/(\w\w)z/$1/
+    - xform/(\w\w)x/$1I/
+    - xform/(\w\w)c/$1U/
+    #上聲  A S D - x ix ux
+    - xform/(\w\w)a/$1X/
+    - xform/(\w\w)s/$1IX/
+    - xform/(\w\w)d/$1UX/
+    #去聲  Q W E - h ih uh
+    - xform/(\w\w)q/$1H/
+    - xform/(\w\w)w/$1IH/  
+    - xform/(\w\w)e/$1UH/
+  #陽聲韻
+    #平聲 M N B V - m n q uq
+    - xform/(\w\w)m/$1M/
+    - xform/(\w\w)n/$1N/
+    - xform/(\w\w)b/$1Q/
+    - xform/(\w\w)v/$1UQ/
+    #上聲 L K J H - mx nx qx uqx
+    - xform/(\w\w)l/$1MX/
+    - xform/(\w\w)k/$1NX/
+    - xform/(\w\w)j/$1QX/
+    - xform/(\w\w)h/$1UQX/
+    #去聲 P O I U - mh nh qh uqh
+    - xform/(\w\w)p/$1MH/
+    - xform/(\w\w)o/$1NH/
+    - xform/(\w\w)i/$1QH/
+    - xform/(\w\w)u/$1UQH/
+  #入聲韻 Y T R F - p t k uk
+    - xform/(\w\w)y/$1P/
+    - xform/(\w\w)t/$1T/
+    - xform/(\w\w)r/$1K/
+    - xform/(\w\w)f/$1UK/
+
+# 第二字母介音元音
+  #開口
+    #a元音 A S D F - a ia ja ra
+    - xform/(\w)a/$1A/
+    - xform/(\w)s/$1IA/
+    - xform/(\w)d/$1JA/
+    - xform/(\w)f/$1RA/
+    #e元音 Q W E R - e ie je re
+    - xform/(\w)q/$1E/
+    - xform/(\w)w/$1IE/
+    - xform/(\w)e/$1JE/
+    - xform/(\w)r/$1RE/
+    #o元音 Z X C - o io jo
+    - xform/(\w)z/$1O/
+    - xform/(\w)x/$1IO/
+    - xform/(\w)c/$1JO/
+    #i元音 T V - i j
+    - xform/(\w)t/$1I/
+    - xform/(\w)v/$1J/
+  #合口
+    #a元音 L K J H - ua ya wa va
+    - xform/(\w)l/$1UA/
+    - xform/(\w)k/$1YA/
+    - xform/(\w)j/$1WA/
+    - xform/(\w)h/$1VA/
+    #e元音 P O I U - ue ye we ve
+    - xform/(\w)p/$1UE/
+    - xform/(\w)o/$1YE/
+    - xform/(\w)i/$1WE/
+    - xform/(\w)u/$1VE/
+    #o元音 M N B - uo yo wo
+    - xform/(\w)m/$1UO/
+    - xform/(\w)n/$1YO/
+    - xform/(\w)b/$1WO/
+    #i元音 Y G - y w
+    - xform/(\w)y/$1Y/
+    - xform/(\w)g/$1W/
+
+# 第一字母 - 聲母
+    # P組 O - ph
+    - "xform/(^|[ '])p/$1P/"
+    - "xform/(^|[ '])o/$1PH/"
+    - "xform/(^|[ '])b/$1B/"
+    - "xform/(^|[ '])m/$1M/"
+    # T組 Y - th
+    - "xform/(^|[ '])t/$1T/"
+    - "xform/(^|[ '])y/$1TH/"
+    - "xform/(^|[ '])d/$1D/"
+    - "xform/(^|[ '])n/$1N/"
+    # K組 I - kh
+    - "xform/(^|[ '])k/$1K/"
+    - "xform/(^|[ '])i/$1KH/"
+    - "xform/(^|[ '])g/$1G/"
+    - "xform/(^|[ '])q/$1Q/"
+    # C組 U - ch
+    - "xform/(^|[ '])c/$1C/"
+    - "xform/(^|[ '])u/$1CH/"
+    - "xform/(^|[ '])z/$1Z/"
+    - "xform/(^|[ '])s/$1S/"
+    - "xform/(^|[ '])r/$1R/"
+    # X組
+    - "xform/(^|[ '])x/$1X/"
+    - "xform/(^|[ '])v/$1V/"
+    # L組
+    - "xform/(^|[ '])l/$1L/"
+    # J組
+    - "xform/(^|[ '])j/$1J/"
+    # H組 E - 0
+    - "xform/(^|[ '])e/$1 /"
+    - "xform/(^|[ '])h/$1H/"
+    - "xform/(^|[ '])w/$1W/"
+
+#全部轉爲小寫
+    - xlit/ABCDEFGHIJKLMNOPQRSTUVWXYZ/abcdefghijklmnopqrstuvwxyz/  
+
+# 侯韻元音為 o
+    - xform/ou/u/
+
+# 次入韻韻尾為 j
+    - xform/aih/aj/
+    - xform/([iyjw])eih/$1ej/
+
+# 通江攝元音
+  #一等 東一 冬 - o u
+    - xform/yeu/u/
+    - xform/veu/uu/
+    #二等 江 -r
+    - xform/reu(q|k)/ru$1/
+    #三等A類 東三 鍾 - i y
+    - xform/weu/iu/
+    #三等B類 東三 鍾 - j w
+    - xform/wau/ju/
+    - xform/ieu(q|k)/wu$1/
+
+luna_pinyin:
+  tag: luna_pinyin
+  dictionary: luna_pinyin
+  prefix: "f"
+  suffix: "`"
+  tips: 〔普通話〕
+  preedit_format:
+    - xform/([nl])v/$1ü/
+    - xform/([nl])ue/$1üe/
+    - xform/([jqxy])v/$1u/
+
+stroke:
+  tag: stroke
+  dictionary: stroke
+  prefix: "a"
+  suffix: "`"
+  tips: 〔筆畫〕
+  preedit_format:
+    - xlit/hspnz/一丨丿丶乙/
+
+tjuqkox_sampheq_reverse_lookup:
+  tags: [ luna_pinyin, stroke ]
+  overwrite_comment: false
+  dictionary: tjuqkox_zyenpheq
+
+emoji_suggestion:
+  opencc_config: emoji.json
+  option_name: emoji_suggestion
+  tips: all
+
+menu:
+  page_size: 10
+
+punctuator:
+  import_preset: symbols # 句讀處理器，統一從外部導入
+
+key_binder:
+  import_preset: default # 快捷鍵，統一從外部導入
+
+recognizer:
+  import_preset: default
+  patterns:
+    punct: "^/([0-9]0?|[a-z]+)$"
+    luna_pinyin: "^f[a-z']*`?$"
+    stroke: "^a[hspnz]*`?$"

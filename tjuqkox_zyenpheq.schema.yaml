@@ -1,0 +1,179 @@
+# Rime schema
+# encoding: utf-8
+
+schema:
+  schema_id: tjuqkox_zyenpheq
+  name: 中古漢語全拼
+  version: "2022.02"
+  author:
+    - 竹客 <tiukha@foxmail.com>
+  description: |
+    中古漢語拼音Polyhedron-Tiukha方案
+    基於「古韻羅馬字」Polyhedron中古漢語拼音方案
+    http://zh.wikipedia.org/wiki/User:Polyhedron/中古漢語拼音
+    Polyhedron-Tiukha方案平均拼音長度約3.79
+    Polyhedron方案平均拼音長度約4.19
+    開啓所有容錯後平均拼音長度約3.22，但大量簡拼需加分隔符
+    親測還是三拼方案好用
+  dependencies:
+    - luna_pinyin
+    - stroke
+
+switches:
+  - name: ascii_mode
+    reset: 0
+    states: [ 中文, 西文 ]
+  - name: full_shape
+    states: [ 半角, 全角 ]
+  - name: simplification
+    states: [ 漢字, 汉字 ]
+  - name: ascii_punct
+    states: [ 。，, ．， ]
+  - name: emoji_suggestion
+    states: [ "🈚️️\uFE0E", "🈶️️\uFE0F" ]
+
+engine:
+  processors:
+    - ascii_composer
+    - recognizer
+    - key_binder
+    - speller
+    - punctuator
+    - selector
+    - navigator
+    - express_editor
+  segmentors:
+    - ascii_segmentor
+    - matcher
+    - affix_segmentor@luna_pinyin
+    - affix_segmentor@stroke
+    - abc_segmentor
+    - punct_segmentor
+    - fallback_segmentor
+  translators:
+    - punct_translator
+    - script_translator
+    - script_translator@luna_pinyin
+    - table_translator@stroke
+  filters:
+    - simplifier
+    - simplifier@emoji_suggestion
+    - uniquifier
+    - reverse_lookup_filter@tjuqkox_zyenpheq_reverse_lookup
+
+speller:
+  alphabet: zyxwvutsrqponmlkjihgfedcba
+  delimiter: " f"      #分隔符
+  algebra:
+    - "xform/'//"       #例外音
+
+    - derive/([ae])j/$1i/                # 次入韵容錯 -j -> -i
+
+    #簡拼，考慮容錯，較多簡拼需加分隔符
+    - abbrev/^([a-z]).+$/$1/       # 首字母簡拼
+    - abbrev/^([ptkc]h).+$/$1/        # 首2字母簡拼
+
+    #次入韻容錯
+    - derive/([urv])aj/$1y/                # 泰合韻夬韻容錯 aj -> y，泰開韻除外
+    - derive/([iyw])ej/$1y/                # 祭韻容錯 ej -> y，B類開口除外
+    - derive/^(.+)jej/$1jy/                # 祭韻B類開口容錯 ej -> y，影母除外
+    - derive/([iy])aj/yj/                # 廢韻容錯 aj -> yj
+    - derive/([iy])aj/yi/                # 廢韻容錯 aj -> yi
+
+    #一等容錯
+    - derive/uo(i|n|t)/u$1/                # 灰韻魂韻沒韻容錯 uo -> u 
+
+    #二等容錯
+    - derive/([rv])e(i|m|n|q|p|t|k)/$1$2/                # 皆韻咸韻山韻耕韻洽韻黠韻麥韻容錯 e -> ，僅reix唉挨两字與rix8字重
+    - derive/rau/ru/                # 肴韻容錯 rau -> ru
+
+    #三等容錯
+    - derive/^(.+)ioi/$1ji/                # 微韻開口容錯 ioi -> wi，影母除外
+    - derive/ioix/jix/                # 微韻開口影母上聲容錯 ioix -> jix
+    - derive/(?<![w])yoi/wi/                # 微韻合口容錯 yoi -> yi，云母除外
+    - derive/wyoi/wyi/                # 微韻合口云母容錯 ioi -> wi
+    - derive/ia(m|p)/i$1/                # 嚴韻業韻容錯 ia -> i，jiap殜𩐱两字與jip熠孴两字重，iam醃腌两字與im愔韾两字重，iap16字與ip挹揖两字重，khiamx欦䇜𩒥三字與khimx坅一字重
+    - derive/([yw])uq/$1q/                # 鍾韻容錯 uq -> q
+
+    #開合容錯
+    - derive/ra(u|m|p)/v$1/                # 肴韻銜韻狎韻容錯 ra -> v
+    - derive/ie(u|m|p)/y$1/                # 宵韻鹽韻葉韻A類容錯 ie -> y
+    - derive/je(u|m|p)/w$1/                # 宵韻鹽韻葉韻B類容錯 je -> w
+
+    #韻母容錯
+    - derive/^(.+)o(m|p)/$1$2/                # 覃韻合韻容錯 o -> 
+    - derive/^(.+)ua(n|t)/$1$2/                # 桓韻末韻容錯 ua -> 
+    - derive/^(.+)uu(q|k)/$1$2/                # 冬韻沃韻容錯 uu ->  
+
+    #韻等容錯
+    - derive/([yw])a(m|p)/u$2/                # 凡韻乏韻容錯 a ->  
+
+    #韻尾聲調容錯
+    - derive/ex/f/                # 容錯 ex -> f
+    - derive/^(.+)eh/$1l/                # 容錯 eh -> l
+
+    - derive/ix/r/                # 容錯 ix -> r
+    - derive/^(.+)ux/$1v/                # 容錯 ux -> v
+
+    - derive/^(.+)mx/$1c/                # 容錯 mx -> c
+    - derive/^(.+)nx/$1z/                # 容錯 nx -> z
+    - derive/^(.+)qx/$1s/                # 容錯 qx -> s
+
+    - derive/([aeouij])ih/$1j/                # 容錯 ih -> j
+    - derive/([aeouij])uh/$1w/              # 容錯 uh -> w
+
+    - derive/^(.+)mh/$1b/                # 容錯 mh -> b
+    - derive/^(.+)nh/$1d/                # 容錯 nh -> d
+    - derive/^(.+)qh/$1g/                # 容錯 qh -> g
+
+translator:
+  dictionary: tjuqkox_zyenpheq
+  spelling_hints: 8
+  preedit_format:
+    - "xform/f/ /"       #分隔符
+
+luna_pinyin:
+  tag: luna_pinyin
+  dictionary: luna_pinyin
+  prefix: "f"
+  suffix: "`"
+  tips: 〔普通話〕
+  preedit_format:
+    - xform/([nl])v/$1ü/
+    - xform/([nl])ue/$1üe/
+    - xform/([jqxy])v/$1u/
+
+stroke:
+  tag: stroke
+  dictionary: stroke
+  prefix: "`"
+  suffix: "f"
+  tips: 〔筆畫〕
+  preedit_format:
+    - xlit/hspnz/一丨丿丶乙/
+
+tjuqkox_zyenpheq_reverse_lookup:
+  tags: [ luna_pinyin, stroke ]
+  overwrite_comment: false
+  dictionary: tjuqkox_zyenpheq
+
+emoji_suggestion:
+  opencc_config: emoji.json
+  option_name: emoji_suggestion
+  tips: all
+
+menu:
+  page_size: 10
+
+punctuator:
+  import_preset: symbols # 句讀處理器，統一從外部導入
+
+key_binder:
+  import_preset: default
+
+recognizer:
+  import_preset: default
+  patterns:
+    punct: "^/([0-9]0?|[a-z]+)$"
+    luna_pinyin: "^f[a-z']*`?$"
+    stroke: "^`[hspnz]*f?$"
