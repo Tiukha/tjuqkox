@@ -129,21 +129,21 @@ speller:
     - xform/q$/B/
     - xform/n$/N/
     - xform/m$/M/
-    #上聲 L K J H - mx nx qx uqx
-    - xform/uqx$/H/
-    - xform/qx$/J/
-    - xform/nx$/K/
-    - xform/mx$/L/
-    #去聲 P O I U - mh nh qh uqh
-    - xform/uqh$/U/
-    - xform/qh$/I/
-    - xform/nh$/O/
-    - xform/mh$/P/
-  #入聲韻 Y T R F - p t k uk
+    #上聲 K J H G - mx nx qx uqx
+    - xform/uqx$/G/
+    - xform/qx$/H/
+    - xform/nx$/J/
+    - xform/mx$/K/
+    #去聲 O I U Y - mh nh qh uqh
+    - xform/uqh$/Y/
+    - xform/qh$/U/
+    - xform/nh$/I/
+    - xform/mh$/O/
+  #入聲韻 P T R F - p t k uk
     - xform/uk$/F/
     - xform/k$/R/
     - xform/t$/T/
-    - xform/p$/Y/
+    - xform/p$/P/
   #無韻尾 Z A Q -0 x h
     - xform/h$/Q/
     - xform/x$/A/
@@ -151,23 +151,23 @@ speller:
 
 # 第二字母介音元音
   #合口
-    #a元音 L K J H - ua ya wa va
-    - xform/va/H/
-    - xform/wa/J/
-    - xform/ya/K/
-    - xform/ua/L/
-    #e元音 U I O P - ue ye we ve
-    - xform/ve/U/
-    - xform/we/I/
-    - xform/ye/O/
-    - xform/ue/P/
+    #a元音 K J H G - ua ya wa va
+    - xform/va/G/
+    - xform/wa/H/
+    - xform/ya/J/
+    - xform/ua/K/
+    #e元音 Y U I O - ue ye we ve
+    - xform/ve/Y/
+    - xform/we/U/
+    - xform/ye/I/
+    - xform/ue/O/
     #o元音 M N B - uo yo wo
     - xform/wo/B/
     - xform/yo/N/
     - xform/uo/M/
-    #i元音 Y G - y w
-    - xform/y/Y/
-    - xform/w/G/
+    #i元音 P L - y w
+    - xform/y/P/
+    - xform/w/L/
   #開口
     #a元音 A S D F - a ia ja ra
     - xform/ra/F/
@@ -195,7 +195,7 @@ speller:
     #二等 江 - R
     #三等A類 東三 鍾 - I Y
     - xform/t(v|h|u|f)$/i$1/
-    - xform/y(v|h|u|f)$/y$1/
+    - xform/p(v|h|u|f)$/y$1/
     #三等B類 東三 鍾 - J W
     - xform/v(v|h|u|f)$/j$1/
     - xform/g(v|h|u|f)$/w$1/
@@ -228,18 +228,18 @@ translator:
     - xform/(\w\w)n/$1N/
     - xform/(\w\w)b/$1Q/
     - xform/(\w\w)v/$1UQ/
-    #上聲 L K J H - mx nx qx uqx
-    - xform/(\w\w)l/$1MX/
-    - xform/(\w\w)k/$1NX/
-    - xform/(\w\w)j/$1QX/
-    - xform/(\w\w)h/$1UQX/
-    #去聲 P O I U - mh nh qh uqh
-    - xform/(\w\w)p/$1MH/
-    - xform/(\w\w)o/$1NH/
-    - xform/(\w\w)i/$1QH/
-    - xform/(\w\w)u/$1UQH/
-  #入聲韻 Y T R F - p t k uk
-    - xform/(\w\w)y/$1P/
+    #上聲 K J H G - mx nx qx uqx
+    - xform/(\w\w)k/$1MX/
+    - xform/(\w\w)j/$1NX/
+    - xform/(\w\w)h/$1QX/
+    - xform/(\w\w)g/$1UQX/
+    #去聲 O I U Y - mh nh qh uqh
+    - xform/(\w\w)o/$1MH/
+    - xform/(\w\w)i/$1NH/
+    - xform/(\w\w)u/$1QH/
+    - xform/(\w\w)y/$1UQH/
+  #入聲韻 P T R F - p t k uk
+    - xform/(\w\w)p/$1P/
     - xform/(\w\w)t/$1T/
     - xform/(\w\w)r/$1K/
     - xform/(\w\w)f/$1UK/
@@ -264,23 +264,23 @@ translator:
     - xform/(\w)t/$1I/
     - xform/(\w)v/$1J/
   #合口
-    #a元音 L K J H - ua ya wa va
-    - xform/(\w)l/$1UA/
-    - xform/(\w)k/$1YA/
-    - xform/(\w)j/$1WA/
-    - xform/(\w)h/$1VA/
-    #e元音 P O I U - ue ye we ve
-    - xform/(\w)p/$1UE/
-    - xform/(\w)o/$1YE/
-    - xform/(\w)i/$1WE/
-    - xform/(\w)u/$1VE/
+    #a元音 K J H G - ua ya wa va
+    - xform/(\w)k/$1UA/
+    - xform/(\w)j/$1YA/
+    - xform/(\w)h/$1WA/
+    - xform/(\w)g/$1VA/
+    #e元音 O I U Y - ue ye we ve
+    - xform/(\w)o/$1UE/
+    - xform/(\w)i/$1YE/
+    - xform/(\w)u/$1WE/
+    - xform/(\w)y/$1VE/
     #o元音 M N B - uo yo wo
     - xform/(\w)m/$1UO/
     - xform/(\w)n/$1YO/
     - xform/(\w)b/$1WO/
-    #i元音 Y G - y w
-    - xform/(\w)y/$1Y/
-    - xform/(\w)g/$1W/
+    #i元音 P L - y w
+    - xform/(\w)p/$1Y/
+    - xform/(\w)l/$1W/
 
 # 第一字母 - 聲母
     # P組 O - ph
@@ -328,14 +328,15 @@ translator:
 
 # 通江攝元音
   #一等 東一 冬 - o u
-    - xform/yeu/u/
-    - xform/veu/uu/
+    - xform/ueu/u/
+    - xform/weu/uu/
     #二等 江 -r
-    - xform/reu(q|k)/ru$1/
+    - xform/reu/ru/
     #三等A類 東三 鍾 - i y
-    - xform/weu/iu/
+    - xform/yeu/iu/
+    - xform/veu/yu/
     #三等B類 東三 鍾 - j w
-    - xform/wau/ju/
+    - xform/yau/ju/
     - xform/ieu(q|k)/wu$1/
 
 luna_pinyin:
