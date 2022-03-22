@@ -6,7 +6,21 @@
 
 ## 緣由
 
+​		在中古漢語拼音方案中，Polyhedron方案合理直觀，並且簡捷方便，是目前流傳最廣使用最多的方案。但在Polyhedron的方案中，仍存在不少問題。
 
+- 聲母最多有三個字母表示，過於繁雜，如拼三等時的thr chr zsr。
+
+- 介音最多有兩個字母表示，過於繁雜，如二等合口的ru以及重紐合口的jy。
+
+- 部分聲母轉寫不合理，如字數較多的全清影母，並其在現代方言中多數演變爲零聲母，轉寫爲q。而字數較少的次濁云母，且相當一部分現代方言不演變爲零聲母，卻不轉寫。
+
+- 部分韻母轉寫不合理，如蟹攝咍灰韻主元音更適合轉寫爲o而非a，皆韻主元音更適合轉寫爲e而非a。
+
+​		爲了解決以上問題，本人在Polyhedron方案的基礎上對其中的聲母、介音進行了較大的調整，並對部分韻母做了修改，從而得到了更爲簡捷並且同樣直觀的方案，爲致敬前輩的工作，暫時命名爲Polyhedron-Tiukha中古漢語拼音方案。爲了方便，本文將Polyhedron方案稱爲原方案，將Polyhedron-Tiukha方案稱爲本方案。
+
+​		本方案轉寫的原則是在保證一定直觀性上，力求拼寫簡便，其次再考慮其他問題（如元音音位、上古來源、最新研究等）。
+
+​		本文採用的擬音皆爲鄭張尚芳擬音。
 
 ## 介音
 
@@ -36,7 +50,19 @@
         <td align="center">u /w/</td>
     </tr>
 </table>
+- 共計7介音，介音的轉寫與韻等及開合口嚴格對應，只有冬鍾兩韻例外。
 
+- //內爲鄭張尚芳的擬音，同一介音有不同變體但並無對立，視爲同一介音。()內是介音的完整轉寫形式，爲了簡便都轉寫成前面單字母形式。實際上可認爲只有三種介音u r i，其他四種爲其組合形式。
+
+-  開口無介音，此處用0表示，合口用u介音表示。唯冬鍾兩韻例外。冬鍾兩韻其中一個u表元音，另一個u形式上表介音，但實際上也並不代表合口。注意，東江兩韻u表元音，不表合口。而侯韻的u爲ou的簡寫，故與效攝流攝其他韻一樣，u實際上爲韻尾。
+
+- 一四等開口無介音，合口爲u介音。
+
+- 上古二等爲含有r成分，後演化爲/ɣ/介音，轉寫爲r。合口ru簡寫爲v。
+
+- 三等介音i有時也兼表元音。合口iu簡寫爲y。
+
+- 特別注意，三等重紐A類介音爲i，重紐B類介音爲j，與原方案相反，定勿混淆。此處按鄭張尚芳的擬音而不按常用的邵榮芬的擬音（邵重紐A類介音爲j，而重紐B類介音爲i）。因爲重紐B類與二等上古關係密切，若按邵的擬音，則舌齒音皆得更改，易造成混亂。所以，重紐B類介音j可看做是ri的簡寫。重紐B類合口riu簡寫爲w。
 
 ## 聲母
 
@@ -154,7 +180,112 @@
         <td align="center"></td>
     </tr>
 </table>
+- 共計37聲母，其中云母匣母爲同一聲母。
 
+- //內爲鄭張尚芳的擬音，()內是後接介音，这里只寫出開口介音。
+
+- 塞音塞擦音的三分爲了直觀和方便，採用類似國際音標的轉寫方案，如幫滂並轉寫爲p ph b，其中h表送氣，不轉寫爲b p bb。
+
+- 邪俟船云以五母爲了簡便分別轉寫爲r(i) r(j) v(i) w(i) j(i)，它們都後接三等介音，其本身不表示介音。
+
+-  章（含日母）組中書船兩母上古來源與章昌常日母不同，考慮其齒音性質，且爲了與心邪生俟四母區分，書船兩母分別轉寫爲x(i) v(i)。
+
+- 精組爲了簡便，轉寫爲c ch z，不轉寫爲ts tsh dz。
+
+- 端知章（含日母不含書船兩母）三組、精莊兩組和羣匣兩母轉寫相同，以後接介音區分，這是因爲考慮到它們上古關係密切。關於聲母介音搭配詳細論述見聲母介音配合部分。
+
+- 端知章（含日母不含書船兩母）三組中，後接一四等介音0（含合口u）的爲端組，後接二等介音r和三等B類介音j（含合口v和w）的爲知組，後接三等A類介音i（含合口y）的爲章（含日母不含書船兩母）組。
+
+- 精莊兩母中，後接一四等介音0和三等A類介音i（含合口u和y）的爲精組，後接二等介音r和三等B類介音j（含合口v和w）的爲莊組。但注意邪俟兩母其實只接三等介音。
+
+- 羣匣兩母中，後接三等介音i j（含合口的y w）的爲羣母。後接一四等介音0和二等介音r（含合口u和 v）的爲匣母。
+
+- 注意，知莊兩組與三等相拼時，i介音一定都要自動變爲j介音（合口y介音也自動變爲w介音）。這是因爲知莊兩組是端精兩組後接r從而發生捲舌化而分化出來，故它們在三等接ri介音即j介音，而不接i介音。章（含日母）組可以看做是端組後接三等普通介音i發生腭化的結果。精組後接三等普通介音i時不腭化，故精組三等不分出其他組，仍保留原精組形式。來母三等介於AB之間，因不存在區分問題，故仍後接i介音。但注意云母本來也接近三等B類，但也因不存在區分問題，故仍後接i介音。
+
+- 疑母爲了簡潔，轉寫爲q，可看做ng的簡寫，並且韻母中韻尾也一樣如此。
+
+- 影母不標記，這裏用0代替。這是考慮到影母字數較多並且近代漢語裏影母大多數都演化成零聲母。
+
+- 一些聲母韻等搭配例外見例外音部分。
+
+- 綜上，聲母最少的無標記（影母），最多兩字母（所有的送氣音）。
+
+合併後的聲母如下表，注意相同的轉寫只是音位相同，實際發音因後接介音影響並不相同：
+
+<table>
+    <tr>
+        <th align="center">全清</th>
+        <th align="center">次清</th>
+        <th align="center">全濁</th>
+        <th align="center">次濁</th>
+        <th align="center">全清</th>
+        <th align="center">全濁</th>
+    </tr>
+    <tr>
+        <td align="center">幫 p</td>
+        <td align="center">滂 ph</td>
+        <td align="center">並 b</td>
+        <td align="center">明 m</td>
+        <td align="center"></td>
+        <td align="center"></td>
+    </tr>
+    <tr>
+        <td align="center">端知章 t</td>
+        <td align="center">透徹昌 th</td>
+        <td align="center">定澄常 d</td>
+        <td align="center">泥孃日 n</td>
+        <td align="center"></td>
+        <td align="center"></td>
+    </tr>
+    <tr>
+        <td align="center"></td>
+        <td align="center"></td>
+        <td align="center"></td>
+        <td align="center"></td>
+        <td align="center">書 x</td>
+        <td align="center">船 v</td>
+    </tr>
+    <tr>
+        <td align="center">精莊 c</td>
+        <td align="center">清初 ch</td>
+        <td align="center">從崇 z</td>
+        <td align="center"></td>
+        <td align="center">心生 s</td>
+        <td align="center">邪俟 r</td>
+    </tr>
+    <tr>
+        <td align="center">見 k</td>
+        <td align="center">溪 kh</td>
+        <td align="center">羣匣 g</td>
+        <td align="center">疑 q</td>
+        <td align="center"></td>
+        <td align="center"></td>
+    </tr>
+    <tr>
+        <td align="center">影 0</td>
+        <td align="center"></td>
+        <td align="center"></td>
+        <td align="center"></td>
+        <td align="center">曉 h</td>
+        <td align="center">云 w</td>
+    </tr>
+    <tr>
+        <td align="center"></td>
+        <td align="center"></td>
+        <td align="center"></td>
+        <td align="center">以 j</td>
+        <td align="center"></td>
+        <td align="center"></td>
+    </tr>
+    <tr>
+        <td align="center"></td>
+        <td align="center"></td>
+        <td align="center"></td>
+        <td align="center">來 l</td>
+        <td align="center"></td>
+        <td align="center"></td>
+    </tr>
+</table>
 
 ## 元音
 
@@ -178,7 +309,7 @@
         <td align="center"></td>
         <td align="center">佳皆咸山耕 /ɛ/</td>
         <td align="center">支祭宵鹽仙清 /ᴇ/<br><i>庚 /æ/</i></td>
-        <td align="center">齊蕭添先青 /e/</i></td>
+        <td align="center">齊蕭添先青 /e/</td>
     </tr>
     <tr>
         <th align="center">前高元音 i</th>
@@ -189,9 +320,9 @@
     </tr>
     <tr>
         <th align="center">央/後元音 o</th>
-        <td align="center">侯痕登 /ə/<br>咍覃 /ʌ/<br>模 /o/<br></td>
+        <td align="center">侯痕登 /ə/<br>咍覃 /ʌ/<br>模 /o/</td>
         <td align="center"></td>
-        <td align="center">微欣 /ɨ/<br>魚 /ʌ/<br>虞 /o/<br></td>
+        <td align="center">微欣 /ɨ/<br>魚 /ʌ/<br>虞 /o/</td>
         <td align="center"></td>
     </tr>
     <tr>
@@ -203,6 +334,71 @@
     </tr>
 </table>
 
+- 共計5元音字母。
+
+- //內爲鄭張尚芳的擬音，表中僅列出開口韻。
+
+- 主要元音爲a e o三個。
+
+- a爲低元音，用於一二三等，有多種變體，並不構成對立。其中一等爲後低元音/ɑ/，二等爲前低元音/a/，三等爲中低元音/ɐ/。三等韻戈韻爲/ɑ/麻韻爲/a/，與/ɐ/並不構成對立。
+
+- e爲前中元音，用於二三四等，有多種變體，並不構成對立。其中二等爲前半低元音/ɛ/，三等爲前中元音/ᴇ/，四等爲前半高元音/e/。
+
+- i爲前高元音/ɪ/，兼做元音/i/，實際爲/iɪ/，只用做三等韻。
+
+- o較爲複雜，主要爲央元音/ɨ//ə/或後元音/ʌ//o/。注意侯韻u爲ou的簡寫。
+
+- u只用於通江兩攝，表示後元音/u//o//ʌ/。因通江兩攝的元音只有剩下的u可轉寫，不得不把它們轉寫爲開合口的形式，但實際上並不表示合口，當特殊對待。
+
+- 庚韻元音/æ/介於/a//ᴇ/相之間，且與它們都不對立，二等轉寫爲a，三等轉寫爲e，三等音位上實際與清韻同。
+
+- 注意臻韻只有莊組字，受聲母影響爲/ɪ/，音位上與眞韻/iɪ/同。
+
+- 之韻元音/ɨ/（兼做介音）理應轉寫爲io。但io已被魚韻/iʌ /轉寫，故之韻轉寫爲ii，其中第一個i爲介音，第二個i爲元音，非爲韻尾。特別注意，這裏之韻脂韻的轉寫與原方案相反，定勿混淆，這是考慮到脂韻的字數遠多於之韻。
+
+- 注意尤韻元音爲/u/，幽韻元音爲/ɪ/，但考慮到尤韻與幽韻構成重紐類，幽韻爲重紐三等B類，尤韻爲重紐四等A類。尤韻轉寫爲iu，故幽韻轉寫爲ju。注意原方案幽韻爲y。
+
+- 蒸韻元音/ɨ/（兼做介音）理應轉寫爲ioq，因iq無韻母轉寫，故簡寫爲iq。
+
+- 綜上，剔除音位變體情況，主要元音與擬音對應關係較爲明確，如下表所示（其中u只用於通江兩攝屬特殊情況例外）：
+
+<table>
+    <tr>
+        <th align="center">主要元音字母（u例外）</th>
+        <th align="center">一等</th>
+        <th align="center">二等</th>
+        <th align="center">三等</th>
+        <th align="center">四等</th>
+    </tr>
+    <tr>
+        <th align="center">低元音 a</th>
+        <td align="center">/ɑ/</td>
+        <td align="center">/a/</i></td>
+        <td align="center">/ɐ/</i></td>
+        <td align="center"></td>
+    </tr>
+    <tr>
+        <th align="center">前中元音 e</th>
+        <td align="center"></td>
+        <td align="center">/ɛ/</td>
+        <td align="center">/ᴇ/</i></td>
+        <td align="center">/e/</td>
+    </tr>
+    <tr>
+        <th align="center">前高元音 i</th>
+        <td align="center"></td>
+        <td align="center"></td>
+        <td align="center">/ɪ/</td>
+        <td align="center"></td>
+    </tr>
+    <tr>
+        <th align="center">央/後元音 o</th>
+        <td align="center">/ə//ʌ//o/</td>
+        <td align="center"></td>
+        <td align="center">/ɨ//ʌ//o/</td>
+        <td align="center"></td>
+    </tr>
+</table>
 
 
 ## 韻尾聲調
@@ -237,7 +433,19 @@
         <td align="center">-p -t -k</td>
     </tr>
 </table>
+- 韻尾共8个（含零韻尾），分別爲陰聲韻尾i u，陽聲韻m n q，入聲韻p t k。
 
+- 次入韻（泰夬廢祭四韻）尾的i用j表示，實際上與普通的i韻尾完全相同，僅標示其上古來源與普通i韻尾不同而已。因其只有去聲，所以j韻尾也兼表去聲調，不再後加字母表聲調。原方案使用d表示，標示其上古來源/ds/，但實際上中古時已經演變爲了i，並且考慮j易聯想到韻尾i，故不轉寫爲d。
+
+- 注意q指的是/ŋ/，同聲母一樣爲ng的簡寫。
+
+- 聲調的演變與上古的後置尾密切相關，其中平聲在上古無後置尾，故不標記。
+
+- 上聲由上古/ʔ/後置尾演變而來，標爲x。注意聲母中影母也爲/ʔ/，但是不轉寫。同時注意聲母轉寫的x指的是書母/ɕ/。
+
+- 去聲由上古/h/後置尾演變而來，標爲h。其中次入韻泰夬廢祭四韻韻尾轉寫爲j，已經兼表聲調，不再後加h。
+
+- 入聲以p t k爲韻尾，故不標記。
 
 ## 韻母
 
@@ -577,7 +785,7 @@
         <td align="center">合</td>
         <td align="center">登 uoq /wəŋ/</td>
         <td align="center"></td>
-        <td align="center">(蒸 yq /wɨŋ/)</td>
+        <td align="center"><i>職 yk /wɨk/</i></td>
         <td align="center"></td>
         <td align="center"></td>
     </tr>
@@ -608,6 +816,39 @@
     </tr>
 </table>
 
+- 共計157韻。
+
+- //內是採用鄭張尚芳方案的擬音。
+
+- 合口介音ru簡寫爲v，iu簡寫爲y，riu（原方案爲jy）簡寫爲w。重紐AB類介音i j的使用與原方案相反，重紐B類的j表示ri的簡寫。
+
+- 知莊兩組三等相拼時，i介音都自動變爲j介音（合口y介音也自動變爲w介音）。
+
+- 韻尾/ŋ/轉寫爲q爲ng的簡寫。
+
+- 戈三開韻和麻三韻合併（ia），見組聲母者爲戈三開韻（kia khia gia），其餘爲麻三韻。戈三開韻原屬果攝，因和麻三開韻合併，故放入假攝。
+
+- 佳韻屬蟹攝，但無韻尾，故放入止攝。
+- 齊韻轉寫爲e，爲ei的簡寫。
+- 侯韻轉寫爲u，爲ou的簡寫。
+
+- 尤幽兩韻爲重紐類，轉寫爲重紐形式，其中尤韻爲重紐A類，幽韻爲重紐B類。故尤韻轉寫爲iu，幽韻轉寫爲ju。
+
+- 臻韻和眞開韻合併（in/jn），莊組聲母者爲臻韻（cjn zjn sjn cjnx chjnx chjnh cjt chjt zjt sjt），其餘爲眞開韻。
+
+- 眞合韻及眞B合韻與諄韻合併（yn/wn），云母（wyn wynh wynx）及重紐B類（wn）爲眞B合韻，其他爲諄韻及諄A韻（yn）。
+
+- 元韻屬臻攝，後演化爲與山攝，放入山攝。
+
+- 庚三韻與清韻合併（ieq/yeq/jeq/weq），莊組（chjek shjeqx shjek）云母（wyeq wyeqh wyeq）及重紐B類爲庚三韻（jeq/weq），其餘爲清韻及清A韻（ieq/yeq）。
+
+- 通江兩攝轉寫不符合一般規則，已在元音部分論述。
+
+- 模虞兩韻的轉寫不符合擬音，考慮其在韻書上開合口性質，沿用原方案轉寫。
+
+- 注意脂之兩韻的轉寫與原方案相反，已在元音部分論述。
+
+- 綜合以上，韻母最少一個字母轉寫，最多三個字母轉寫。韻母的形式爲介音+元音+韻尾。除冬鍾兩韻轉寫例外外，介音嚴格對應韻等及開合口規則（已在介音部分論述），元音與韻等的對應也非常整齊（已在元音部分論述），韻尾除微佳兩韻外，與韻攝的對應也十分規整。
 
 
 ## 与Polyhedron方案的區別
@@ -734,7 +975,7 @@
         <th align="center">原方案</th>
     </tr>
     <tr>
-        <td align="center">脂開韻</td>
+        <td align="center">脂韻</td>
         <td align="center">i</td>
         <td align="center">ii</td>
     </tr>
@@ -775,6 +1016,43 @@
     </tr>
 </table>
 
+- 章組原方案轉寫爲c(j) ch(j) z(j)，本方案轉寫爲t(i) th(i) d(i)。
+
+- 書船兩母原方案轉寫爲s(j) zs(j)，本方案轉寫爲x(i) v(i)。
+
+- 邪俟兩母原方案轉寫爲zs(i/ri)表示，本方案用r (i/j)。
+
+- 疑母原方案轉寫爲ng，本方案簡寫爲q。
+
+- 影母原方案轉寫爲q，本方案不轉寫，此處用0表示。
+
+- 匣母原方案轉寫爲gh，本方案轉寫爲g(0/r)。
+
+- 云母原方案不轉寫，此處用0表示，本方案轉寫爲w(i)。
+
+- 以母原方案轉寫爲(j)，本方案轉寫爲j(i)。
+
+- 二等合口介音原方案轉寫爲ru，本方案簡寫爲v。
+
+- 知莊兩組三等介音原方案轉寫爲ri ry，本方案簡寫爲j w。
+
+- 章組（含日母）和以母及重紐A類三等介音原方案轉寫爲j(i) jy，本方案轉寫爲i y。其中注意原方案三等開口除脂ii之i眞in蒸ing侵im五韻外j後的i都省去，本方案無此規則。
+
+- 重紐B類介音原方案轉寫爲i y，本方案轉寫爲j w。
+
+- 次入韻尾原方案轉寫爲d，本方案轉寫爲j。
+
+- 喉鼻韻尾原方案轉寫爲ng，本方案簡寫爲q。
+
+- 脂韻原方案轉寫爲ii yi ji wi，本方案轉寫爲i y j w。
+
+- 之韻原方案轉寫爲i，本方案轉寫爲ii。
+
+- 咍韻灰韻原方案轉寫爲ai uai，本方案轉寫爲oi uoi。
+
+- 皆韻原方案轉寫爲rai ruai，本方案轉寫爲rei vei。
+
+- 幽原方案轉寫爲y，本方案轉寫爲ju。
 
 ## 三拼方案
 
@@ -932,10 +1210,15 @@
         <td colspan="2"></td>
     </tr>
 </table>
-
-
+- 三拼方案可自由定義，本方案僅供參考。
+- 第一字母爲聲母，按鍵盤排列，唯送氣聲母統一排在Y-O四鍵。其中Y臨近T，做爲th，O臨近P，做爲ph，I臨近K，做爲kh，餘下U，做爲ch。剩下的A F兩鍵，分別做爲五筆反查和拼音反查。
+- 第二字母爲介音韻腹。左側開始的爲開口，右側的開始（PL兩鍵因最下層無對應鍵，不作爲開始）爲合口，依次爲無介音、i介音、j介音、r介音。並且a放在含A的中層鍵盤，e在放在含E的上層鍵盤，o放在下層鍵盤。餘下T V P L鍵做爲i j y w。
+- 第三字母爲韻尾聲調。由下往上依次爲平聲、上聲、去聲入聲。從左往右依次爲無韻尾、i韻尾、u韻尾。從右往左依次爲m韻尾、n韻尾、q韻尾、uq韻尾。餘下P T R F鍵做爲p t k uk。餘下L無用。
+- 注意侯韻在三拼時看作ou。通攝江攝韻尾看做uq，並且第二字母直接用O U R I Y J W表示uq uuq ruq iuq yuq juq wuq的韻腹。
 
 ## 例外字
+
+例外音共32小韻39字，統一在聲母後加'表示，列表如下：
 
 | 小韻次序 | 字   | 聲母 | 韻母   | 等   | 呼   | 調   | 轉寫   | 區分  | 原因         |
 | -------- | ---- | ---- | ------ | ---- | ---- | ---- | ------ | ----- | ------------ |
@@ -972,38 +1255,9 @@
 | 3791     | 遪   | 常   | 合     | 一   | 開   | 入   | d'op   | dop   | 章組不接一等 |
 | 3808     | 譫   | 章   | 盍     | 一   | 開   | 入   | t'ap   | tap   | 章組不接一等 |
 
-
-
-## 安裝方法
-
-- [Windows](https://ngli.github.io/安装方法/Windows.html)
-- [macOS](https://ngli.github.io/安装方法/macOS.html)
-- [Linux](https://ngli.github.io/安装方法/Linux.html)
-- [Android](https://ngli.github.io/安装方法/Android.html)
-- [iOS](https://ngli.github.io/安装方法/iOS.html)
-
-## 使用
-
-- [模糊音](https://ngli.github.io/使用/模糊音.html)
-- [輸入提示](https://ngli.github.io/使用/输入提示.html)
-- [反查](https://ngli.github.io/使用/反查.html)
-- [自定義短語](https://ngli.github.io/使用/自定义短语.html)
-
-
-
 ## 參考資料
 
 - 
-
-## 字詞查詢
-
-
-
-## 鳴謝
-
-- [Rime](https://rime.im/)
-- [Trime](https://github.com/osfans/trime)
-- [iRime](https://github.com/jimmy54/iRime)
 
 ## 聯繫
 
