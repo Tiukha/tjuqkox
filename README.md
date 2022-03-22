@@ -22,6 +22,10 @@
 
 ​		本文採用的擬音皆爲鄭張尚芳擬音。
 
+​		本方案最大的優勢是只需要六字母就可以轉寫中古漢語（含聲調），並且保持了不錯的直觀性和可閱讀性。原方案拼音長度爲4.19字母，本方案長度減少爲3.79。
+
+​		轉寫可分解爲聲母+介音+元音+韻尾+聲調的形式。其中聲母0-2字母，介音0-1字母，元音1字母，韻尾0-1字母，聲調0-1字母。此方案拼音最少1字母，最多6字母。可以以任何字母起始（除f字母未用到外）。少量例外音加'表示。
+
 ## 介音
 
 <table>
@@ -1255,9 +1259,263 @@
 | 3791     | 遪   | 常   | 合     | 一   | 開   | 入   | d'op   | dop   | 章組不接一等 |
 | 3808     | 譫   | 章   | 盍     | 一   | 開   | 入   | t'ap   | tap   | 章組不接一等 |
 
+## 示例
+
+以下三首古詩詞示例，第一行爲本方案轉寫，第二行爲原方案轉寫。
+
+西洲曲
+
+Se tiu khyuk
+
+Se cju khyuk
+
+魏晉 無名氏
+
+Qyoih cinh Myo mieq diex
+
+Ngyoih cinh Myo mjeng zjex
+
+憶梅下西洲，折梅寄江北。
+
+Ik muoi grax se tiu，diet muoi kjeh kruq pok
+
+Qik muai ghrax se cju，zjet muai kieh krung pok
+
+單衫杏子紅，雙鬢鴉雛色。
+
+Tan sram graqx ciix guq，sruq pinh ra zwo sjk
+
+Tan sram ghrangx cix ghung，srung pjinh qra zryo srik
+
+西洲在何處，兩槳橋頭渡。
+
+Se tiu zoih ga thioh，liaqx ciaqx gjeu du doh
+
+Se cju zaih gha chjoh，liangx ciangx gieu du doh
+
+日暮伯勞飛，風吹烏臼樹。
+
+Nit moh prak lau pyoi，piuq thye o kiux dyoh
+
+Njit moh prak lau pyoi，piung chjye qo kiux zjyoh
+
+樹下即門前，門中露翠鈿。
+
+Dyoh grax cik muon zen，muon tjuq loh chyh den
+
+Zjyoh ghrax cik muon zen，muon triung loh chyih den
+
+開門郎不至，出門採紅蓮。
+
+Khoi muon laq pyot tih，thyt muon choix guq len
+
+Khai muon lang pyot cjiih，chjyt muon chaix ghung len
+
+採蓮南塘秋，蓮花過人頭。
+
+Choix len nom daq chiu，len hva kua nin du
+
+Chaix len nom dang chiu，len hrua kua njin du
+
+低頭弄蓮子，蓮子清如水。
+
+Te du luqh len ciix，len ciix chieq nio xyx
+
+Te du lungh len cix，len cix chieng njo sjyix
+
+置蓮懷袖中，蓮心徹底紅。
+
+Tjih len gvei riuh tjuq，len sim thjet tex guq
+
+Trih len ghruai zsiuh triung，len sim thriet tex ghung
+
+憶郎郎不至，仰首望飛鴻。
+
+Ik laq laq pyot tih，qiaqh xiux myaqh pyoi guq
+
+Qik lang lang pyot cjiih，ngiangh sjux myangh pyoi ghung
+
+鴻飛滿西洲，望郎上青樓。
+
+Guq pyoi muanx se tiu，myaqh laq diaqx cheq lu
+
+Ghung pyoi muanx se cju，myangh lang zjangx cheng lu
+
+樓高望不見，盡日欄杆頭。
+
+Lu kau myaq pyot kenh，zinx nit lan kanh du
+
+Lu kau myang pyot kenh，zinx njit lan kanh du
+
+欄杆十二曲，垂手明如玉。
+
+Lan kanh dip nih khyuk，dye xiux mjeq nio qyuk
+
+Lan kanh zjip njiih khyuk，zjye sjux mieng njo ngyuk
+
+捲簾天自高，海水搖空綠。
+
+Kwenx liem then zih kau，hoix xyx jieu khuq lyuk
+
+Kyenx liem then ziih kau，haix sjyix jeu khung lyuk
+
+海水夢悠悠，君愁我亦愁。
+
+Hoix xyx miuqh jiu jiu，kyon zju qax jiek zju
+
+Haix sjyix miungh ju ju，kyon zriu ngax jek zriu
+
+南風知我意，吹夢到西洲。
+
+Nom piuq tje qax iih，thye miuqh tauh se tiu
+
+Nom piung trie ngax qih，chjye miungh tauh se cju
+
+ 
+
+錦瑟
+
+Kjmx sjt
+
+Kimx srit
+
+唐 李商隱
+
+Daq Liix xiaq ionx
+
+Dang Lix sjang qionx
+
+錦瑟無端五十絃，
+
+Kjmx sjt myo tuan qox dip gen
+
+Kimx srit myo tuan ngox zjip ghen
+
+一絃一柱思華年。
+
+It gen it dwox siih gva nen
+
+Qjit ghen qjit dryox sih ghrua nen
+
+莊生曉夢迷蝴蝶，
+
+Cjaq sraq heux miuqh me go dep
+
+Criang srang heux miungh me gho dep
+
+望帝春心託杜鵑。
+
+Myaqh teh thyn sim thak dox kuen
+
+Myangh teh chjyn sim thak dox kuen
+
+滄海月明珠有淚，
+
+Chaq hoix qyat mjeq tyo wiux lyh
+
+Chang haix ngyat mieng cjyo iux lyih
+
+藍田日暖玉生煙。
+
+Lam den nit nuanx qyuk sraq en
+
+Lam den njit nuanx ngyuk srang qen
+
+此情可待成追憶，
+
+Chiex zieq khax doix dieq dw ik
+
+Chiex zieng khax daix zjeng tryi qik
+
+只是當時已惘然。
+
+Tiex diex taq dii jiix myaqx nien
+
+Cjex zjex tang zji jix myangx njen
+
+ 
+
+暗香
+
+Omh hiaq
+
+Qomh hiang
+
+宋 姜夔
+
+Suuqh Kiaq gw
+
+Suungh Kiang gyi
+
+舊時月色。算幾番照我，梅邊吹笛。
+
+Giuh dii qyat sjk。Suanh kioix phyan tieuh qax，muoi pen thye dek
+
+Giuh zji ngyat srik。Suanh kioix phyan cjeuh ngax，muai pen chjye dek
+
+喚起玉人，不管清寒與攀摘。
+
+Huanh khiix qyuk nin，pyot kuanx chieq gan jiox phran trek
+
+Huanh khix ngyuk njin，pyot kuanx chieng ghan jox phran trek
+
+何遜而今漸老，都忘卻、春風詞筆。
+
+Ga suonh nii kjm ziemx laux，to myaqh khiak、thyn piuq rii pjt
+
+Gha suonh nji kim ziemx laux，to myangh khiak、chjyn piung zsi pit
+
+但怪得、竹外疏花，香冷入瑤席。
+
+Danx kveih tok、tjuk quaj sjo hva，hiaq lraqx nip jieu riek
+
+Danx kruaih tok、triuk nguad srio hrua，hiang lrangx njip jeu zsiek
+
+ 
+
+江國。正寂寂。
+
+Kruq kuok。Tieqh zek zek
+
+Krung kuok。Cjengh zek zek
+
+歎寄與路遙，夜雪初積。
+
+Thanh kjeh jiox loh jieu，jiah syet chjo ciek
+
+Thanh kieh jox loh jeu，jah syet chrio ciek
+
+翠尊易泣。紅萼無言耿相憶。
+
+Chyh cuon jiek khjp。guq qak myo qian kreqx siaq ik
+
+Chyih cuon jek khip。ghung ngak myo ngian krengx siang qik
+
+長記曾攜手處，千樹壓、西湖寒碧。
+
+Djaq kiih zoq gue xiux thioh，chen dyoh rap、se go gan pjek
+
+Driang kih zong ghue sjux chjoh，chen zjyoh qrap、se gho ghan piek
+
+又片片、吹盡也，幾時見得。
+
+Wiuh phenh phenh、thye zinx jiax，kioix dii kenh tok
+
+Iuh phenh phenh、chjye zinx jax，kioix zji kenh tok
+
 ## 參考資料
 
-- 
+[1] http://zh.wikipedia.org/wiki/User:Polyhedron/中古漢語拼音
+
+[2] 韻典網·廣韻http://ytenx.org/kyonh/
+
+[3] 潘悟雲.漢語歷史語音學(M).上海：上海教育出版社，2007.7.
+
+[4] 鄭張尚芳.上古音系（第二版）(M).上海：上海教育出版社，2018.9.
+
+[5] 白一平，沙加爾.上古漢語新構擬(M).來國龍，鄭偉，王弘治，譯.上海：上海教育出版社，2019.11.
+
+[6] 李方桂.上古音研究(M).北京：商務印書館，1980.7.
 
 ## 聯繫
 
