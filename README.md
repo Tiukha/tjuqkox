@@ -24,7 +24,7 @@
 
 ​		本方案最大的優勢是只需要六字母就可以轉寫中古漢語（含聲調），並且保持了不錯的直觀性和可閱讀性。
 
-​		**原方案拼音長度爲4.19字母，本方案長度減少爲3.79。**
+​		**原方案平均拼音長度爲4.19字母，本方案平均長度減少爲3.79。**
 
 ​		轉寫可分解爲聲母+介音+元音+韻尾+聲調的形式。其中聲母0-2字母，介音0-1字母，元音1字母，韻尾0-1字母，聲調0-1字母。此方案拼音最少1字母，最多6字母。可以以任何字母起始（除f字母未用到外）。少量例外音加'表示。
 
@@ -1522,6 +1522,27 @@ Iuh phenh phenh、chjye zinx jax，kioix zji kenh tok
 [5] 白一平，沙加爾.上古漢語新構擬(M).來國龍，鄭偉，王弘治，譯.上海：上海教育出版社，2019.11.
 
 [6] 李方桂.上古音研究(M).北京：商務印書館，1980.7.
+
+## 安裝方法
+
+- [Windows](https://ngli.github.io/安装方法/Windows.html)
+- [macOS](https://ngli.github.io/安装方法/macOS.html)
+- [Linux](https://ngli.github.io/安装方法/Linux.html)
+- [Android](https://ngli.github.io/安装方法/Android.html)
+- [iOS](https://ngli.github.io/安装方法/iOS.html)
+
+## 使用
+
+- [模糊音](https://ngli.github.io/使用/模糊音.html)
+- [輸入提示](https://ngli.github.io/使用/输入提示.html)
+- [反查](https://ngli.github.io/使用/反查.html)
+- [自定義短語](https://ngli.github.io/使用/自定义短语.html)
+
+## 鳴謝
+
+- [Rime](https://rime.im/)
+- [Trime](https://github.com/osfans/trime)
+- [iRime](https://github.com/jimmy54/iRime)
 
 ## 聯繫
 
